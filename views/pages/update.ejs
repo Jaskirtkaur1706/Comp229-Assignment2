@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/headermini'); %>
+    </header>
+    <main id="main">
+        <div class="inner">
+            <section class="section-main update">
+                <h1 class="title" style="margin-left:20px;">Update Contact</h1>
+                <form method="GET" action="" id="login-form" class="form" style="padding-top:0;">
+                    <p>Leave the fields empty if they are not to be updated</p>
+                    <fieldset><input autocomplete="off" type="text" name="name" class="textbox" placeholder="Contact Name"/></fieldset>
+                    <fieldset><input type="password" name="number" class="textbox" placeholder="Contact Number"/></fieldset>
+                    <fieldset><input type="password" name="email" class="textbox" placeholder="Contact Email"/></fieldset>
+                    <fieldset style="padding-top:0;">
+                        <%= global_data.auth_status %><br/>
+                        <a class="btn" href="/admin" style="width:190px;display:inline-block;padding:14px;position:relative;top:1px;">Cancel</a>
+                        <input class="btn" style="width:190px;" type="submit" value="Update Contact"/>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

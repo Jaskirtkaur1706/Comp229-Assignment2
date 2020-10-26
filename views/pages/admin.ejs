@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/headermini'); %>
+    </header>
+    <main id="main">
+        <div class="inner">
+            <section class="section-main admin">
+                <h1 class="title">My Contact List</h1>
+                <table class="contact-list table-s1">
+                    <tr>
+                        <th>Contact Name</th>
+                        <th>Contact Number</th>
+                        <th>Contact Email</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <% for(var i=0; i < global_data.contact_list.length; i++) { %>
+                        <tr>
+                          <td><%= global_data.contact_list[i].name %></td>
+                          <td><%= global_data.contact_list[i].number %></td>
+                          <td><%= global_data.contact_list[i].email %></td>
+                          <td><a class="action-btn" href="/update/<%= global_data.contact_list[i]._id %>">Update</a></td>
+                          <td><a class="action-btn" href="/delete/<%= global_data.contact_list[i]._id %>">Delete</a></td>
+                        </tr>
+                     <% } %>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

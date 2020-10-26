@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/header'); %>
+    </header>
+    <main id="main">
+        <div class="inner">
+            <section class="section-main section-contact">
+                <h1 class="title">Contact</h1>
+                <table class="table-s1">
+                    <tr>
+                        <td>Name</td>
+                        <td>Jaskirat Kaur</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>jaskiratkaur1706@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>Brampton, ON</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="section-main section-aboutme">
+                <h1 class="title">Get in touch</h1>
+                <p>
+                    You can contact me for any work related or general queries via this form or the contact info provided in the above section.
+                    I will try to reply as soon as I can. Thanks.
+                </p>
+                <form class="form" action="/">
+                    <fieldset>
+                        <input class="textbox" type="text" placeholder="Name">
+                    </fieldset>
+                    <fieldset>
+                        <input class="textbox" type="text" placeholder="Email">
+                    </fieldset>
+                    <fieldset>
+                        <input class="textbox" type="text" placeholder="Message">
+                    </fieldset>
+                    <fieldset>
+                        <input style="width:220px;" class="btn" type="submit" value="Send Message">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

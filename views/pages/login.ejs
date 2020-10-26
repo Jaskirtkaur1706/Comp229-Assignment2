@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+        <header id="header">
+            <%- include('../partials/header'); %>
+        </header>
+        <main id="main">
+            <div class="inner">
+                <form id="form-login" class="form" method="GET" action="/login/auth">
+                    <h1 class="title">Login</h1>
+                    <div class="inner">
+                        <fieldset>
+                            <input class="textbox" type="text" name="username" placeholder="Username" autocomplete="off"/>
+                        </fieldset>
+                        <fieldset>
+                            <input class="textbox" type="password" name="password" placeholder="Password"/>
+                        </fieldset>
+                        <fieldset>
+                            <p style="margin-top:0;"><%= global_data.auth_status %></p>
+                            <input class="btn" value="Login" type="submit"/>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer id="footer">
+            <%- include('../partials/footer'); %>
+        </footer>
+    </body>
+</html>
